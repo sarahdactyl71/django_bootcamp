@@ -41,8 +41,16 @@ def arrayCheck(nums):
 # stringBits('Hi') → 'H'
 # stringBits('Heeololeo') → 'Hello'
 
-def stringBits(str):
-  # CODE GOES HERE
+def stringBits(string):
+
+    result = ""
+
+    for letter in range(len(string)):
+        if letter%2 == 0:
+            result = result + string[letter]
+
+    return result
+
 
 
 #####################
