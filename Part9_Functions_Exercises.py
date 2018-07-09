@@ -123,7 +123,7 @@ def no_teen_sum(a, b, c):
 def fix_teen(n):
   if n in [13, 14, 17, 18, 19]:
       return 0
-  return n 
+  return n
 
 #####################
 ## -- PROBLEM 6 -- ##
@@ -138,4 +138,9 @@ def fix_teen(n):
 # count_evens([1, 3, 5]) → 0
 
 def count_evens(nums):
-  # CODE GOES HERE
+  result = 0
+  for number in nums:
+      if number%2 == 0:
+          result += 1
+
+  return result
