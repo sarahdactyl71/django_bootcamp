@@ -51,7 +51,7 @@ def stringBits(string):
 
     return result
 
-
+#could get the same result by slicing, i.e. string[::2]
 
 #####################
 ## -- PROBLEM 3 -- ##
