@@ -118,9 +118,12 @@ def doubleChar(string):
 # no_teen_sum(2, 1, 14) → 3
 
 def no_teen_sum(a, b, c):
-  # CODE GOES HERE
+  return fix_teen(a) + fix_teen(b) + fix_teen(c)
+
 def fix_teen(n):
-  # CODE GOES HERE
+  if n in [13, 14, 17, 18, 19]:
+      return 0
+  return n 
 
 #####################
 ## -- PROBLEM 6 -- ##
