@@ -89,8 +89,11 @@ def end_other(a, b):
 # doubleChar('AAbb') → 'AAAAbbbb'
 # doubleChar('Hi-There') → 'HHii--TThheerree'
 
-def doubleChar(str):
-  # CODE GOES HERE
+def doubleChar(string):
+    result = ''
+  for letter in string:
+      resut += letter*2
+  return result
 
 
 #####################
