@@ -1,5 +1,10 @@
 class Dog():
 
+    # CLASS OBJECT ATTRIBUTE
+    #this is true for every damn class OBJECT
+    
+    species = "canine"
+
     def __init__(self, breed, name):
         self.breed = breed
         self.name =name
@@ -11,3 +16,4 @@ print(mydog.breed)
 print(mydog.name)
 print(otherdog.breed)
 print(otherdog.name)
+print(mydog.species)
