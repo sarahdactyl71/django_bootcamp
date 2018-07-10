@@ -27,6 +27,7 @@
 # https://en.wikipedia.org/wiki/War_(card_game)
 
 from random import shuffle
+import random
 
 # Two useful variables for creating Cards.
 SUITE = 'H D S C'.split()
@@ -45,6 +46,15 @@ class Deck:
             for char in RANKS:
                 full_deck.append(letter + char)
         return full_deck
+
+    def split_deck():
+        full_deck = Deck.create_deck(SUITE, RANKS)
+        random.shuffle(full_deck)
+        player_one_deck = full_deck[:26]
+        player_two_deck = full_deck[26:]
+
+        return player_one_deck and player_two_deck
+    import code; code.interact(local=dict(globals(), **locals()))
 
 class Hand:
     '''
@@ -67,4 +77,6 @@ class Player:
 print("Welcome to War, let's begin...")
 deck = Deck.create_deck(SUITE, RANKS)
 print(deck)
+cards = Deck.split_deck()
+print(cards)
 # Use the 3 classes along with some logic to play a game of war!
