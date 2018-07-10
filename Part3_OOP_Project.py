@@ -74,8 +74,7 @@ class Player:
 #### GAME PLAY #######
 ######################
 print("Welcome to War, let's begin...")
-deck = Deck.create_deck(SUITE, RANKS)
-print(deck)
+
 cards = Deck.split_deck()
 import code; code.interact(local=dict(globals(), **locals()))
 print(cards)
