@@ -44,7 +44,7 @@ class Deck:
         full_deck = []
         for letter in SUITE:
             for char in RANKS:
-                full_deck.append(letter + char)
+                full_deck.append(char + letter)
         return full_deck
 
     def split_deck():
@@ -53,8 +53,7 @@ class Deck:
         player_one_deck = full_deck[:26]
         player_two_deck = full_deck[26:]
 
-        return player_one_deck and player_two_deck
-    import code; code.interact(local=dict(globals(), **locals()))
+        return [player_one_deck, player_two_deck]
 
 class Hand:
     '''
@@ -78,5 +77,6 @@ print("Welcome to War, let's begin...")
 deck = Deck.create_deck(SUITE, RANKS)
 print(deck)
 cards = Deck.split_deck()
+import code; code.interact(local=dict(globals(), **locals()))
 print(cards)
 # Use the 3 classes along with some logic to play a game of war!
