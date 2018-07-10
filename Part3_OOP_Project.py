@@ -39,7 +39,12 @@ class Deck:
     the players. It will use SUITE and RANKS to create the deck. It should also
     have a method for splitting/cutting the deck in half and Shuffling the deck.
     """
-    pass
+    def create_deck(SUITE, RANKS):
+        full_deck = []
+        for letter in SUITE:
+            for char in RANKS:
+                full_deck.append(letter + char)
+        return full_deck
 
 class Hand:
     '''
@@ -60,5 +65,6 @@ class Player:
 #### GAME PLAY #######
 ######################
 print("Welcome to War, let's begin...")
-
+deck = Deck.create_deck(SUITE, RANKS)
+print(deck)
 # Use the 3 classes along with some logic to play a game of war!
